@@ -1,0 +1,85 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+* {
+margin: 0;
+}
+
+html, body {
+height: 100%;
+overflow: hidden;
+}
+
+.site-header {
+  height: 70px;
+  background: #663300;
+  
+}
+
+.head-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.head-nav li {
+  float: left;
+}
+/*the float here gets block elements to slide next to each other*/
+
+.head-nav a {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color: #fff2e6;
+  color: white;
+}
+/*displaying links as blocks make the whole block clickable*/
+
+.head-nav a:hover {
+background-color: #ffb366;
+color: #ff8000;
+}
+
+.page-wrap {
+  min-height: 100%;
+  margin-top: -100px;
+  /* equal to footer height */
+  margin-bottom: -140px; 
+  background-color: #ffe6cc;
+}
+
+.content {
+  margin-top: 100px;
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+.site-footer, .page-wrap:after {
+  /* .push must be the same height as footer */
+height: 70px; 
+}
+
+.site-footer {
+  background: #663300;
+}
+
+.site-footer {
+text-align: center;
+color: #fff2e6;
+}
