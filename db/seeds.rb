@@ -5,4 +5,3 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Product.create(:name => "Weird Beard", :description => "Rub in, dry conditioning shampoo for beards", :image_url => "aerosol.jpg" :price => "$15.97")
