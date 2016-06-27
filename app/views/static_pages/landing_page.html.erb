@@ -1,4 +1,12 @@
-<h2>Featured Product:</h2>
-<h3><%= @featured_product.name %></h3>
-<h5><%= @featured_product.description %></h5>
-<%= image_tag("bottle1.jpg", size: "220") %>
+<div class="landing-title">
+	<h2>Featured Product:</h2>
+</div>
+
+
+<div class="landing-container">	
+	<div class="featured-product">
+		<h3><%= @featured_product.name %></h3>
+		<h5><%= @featured_product.description %></h5>
+		<%= image_tag("bottle1.jpg", size: "220") %>
+	</div>	
+</div>		
