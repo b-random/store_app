@@ -2,21 +2,23 @@
 
 <p><h1>BeardCo. Products</h1><h6><%= link_to 'New Product', new_product_path %></h6></p>
 
-<div class="container">
-  <div class="row">
-    <% @products.each do |product| %>
-      <div class="col-sm-2 col-md-4">
-        <h3><%= product.name %></h3>
-        <%= image_tag(product.image_url, size: "80", class: "img-responsive") %>
-        <p><%= product.description %></p>
-        <strong><%= product.price %></strong>
-        <%= link_to 'Show', product %>
-        <%= link_to 'Edit', edit_product_path(product) %>
-        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div><!-- /col -->
-    <% end %>
+<div class="container-scroll">
+  <div class="container">
+    <div class="row">
+      <% @products.each do |product| %>
+        <div class="col-sm-2 col-md-4">
+          <h3><%= product.name %></h3>
+          <%= image_tag(product.image_url, size: "80", class: "img-responsive") %>
+          <p><%= product.description %></p>
+          <strong><%= product.price %></strong>
+          <%= link_to 'Show', product %>
+          <%= link_to 'Edit', edit_product_path(product) %>
+          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div><!-- /col -->
+      <% end %>
+    </div>
   </div>
-</div>
+</div>  
 
 
 

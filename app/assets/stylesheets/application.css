@@ -77,9 +77,11 @@ height: 70px;
 
 .site-footer {
   background: #663300;
+  z-index: 2;
 }
 
 .site-footer {
-text-align: center;
-color: #fff2e6;
+  position: relative;
+  text-align: center;
+  color: #fff2e6;
 }
