@@ -5,6 +5,8 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
+    render layout: "products" 
+    #creates a default layout for products/index.html.erb
   end
 
   # GET /products/1
