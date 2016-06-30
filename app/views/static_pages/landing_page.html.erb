@@ -1,12 +1,35 @@
-<div class="landing-title">
-	<h2>Featured Product:</h2>
-</div>
+<div class="carousel-flex-con">  
+  <div class="landing-intro">
+    <h1>Deals</h1>
+  </div>
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
 
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <% @products.each do |product| %>
+      <div class="item<%= " active" if product == @products.second %>">      <%= image_tag(product.image_url) %>
+        <div class="carousel-caption">
+          <%= product.name %>
+          <%= product.description %>
+        </div>
+      </div>
+      <% end %>
+    </div>
 
-<div class="landing-container">	
-	<div class="featured-product">
-		<h3><%= @featured_product.name %></h3>
-		<h5><%= @featured_product.description %></h5>
-		<%= image_tag("bottle1.jpg", size: "220") %>
-	</div>	
-</div>		
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>  

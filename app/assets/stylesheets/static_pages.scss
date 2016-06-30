@@ -20,13 +20,19 @@
 	justify-content: center;
 }
 
-.landing-title {
+.carousel-flex-con {
+	display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column; /* Safari */
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 22%;
+  padding-top: 25px;
+  margin-left: 39%;
+}
+
+.landing-intro {
 	text-align: center;
 }
 
-.landing-container {
-	display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: center;
-    justify-content: center;
-}
