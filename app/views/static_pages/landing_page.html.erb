@@ -13,7 +13,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <% @products.each do |product| %>
-      <div class="item<%= " active" if product == @products.second %>">      <%= image_tag(product.image_url) %>
+      <div class="item<%= " active" if product == @products.second %>"><%= link_to image_tag(product.image_url), product_path(product) %>
         <div class="carousel-caption">
           <%= product.name %>
           <%= product.description %>
