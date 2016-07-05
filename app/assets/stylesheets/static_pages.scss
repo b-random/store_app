@@ -36,3 +36,19 @@
 	text-align: center;
 }
 
+.carousel-indicators li {
+  background-color: rgba(70,70,70,.25);
+}
+
+.carousel-indicators .active {
+  background-color: #ff9933;
+}
+
+.carousel-inner .item {
+	width: 400px;
+	height: 600px;
+}
+
+.carousel-caption {
+	color: #331a00;
+}
