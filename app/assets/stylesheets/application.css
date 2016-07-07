@@ -14,18 +14,22 @@
  *= require_self
  */
 * {
- margin: 0;
+  margin: 0;
 }
 
-html, body {
+html {
   height: 100%;
-  overflow: hidden;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .site-header {
   height: 70px;
   background: #663300;
-  
 }
 
 .head-nav {
@@ -37,7 +41,7 @@ html, body {
 .head-nav li {
   float: left;
 }
-/*the float here gets block elements to slide next to each other*/
+
 
 .head-nav a {
   display: block;
@@ -46,11 +50,10 @@ html, body {
   color: #fff2e6;
   color: white;
 }
-/*displaying links as blocks make the whole block clickable*/
 
 .head-nav a:hover {
-background-color: #ffb366;
-color: #ff8000;
+  background-color: #ffb366;
+  color: #ff8000;
 }
 
 .default-search {
@@ -61,20 +64,12 @@ color: #ff8000;
 }
 
 .page-wrap {
-  min-height: 100%;
-  margin-top: -100px;
-  /* equal to footer height */
-  margin-bottom: -140px; 
+  flex: 1 0 auto;
   background-color: #ffe6cc;
 }
 
 .content {
-  margin-top: 100px;
-}
-
-.page-wrap:after {
-  content: "";
-  display: block;
+  margin-bottom: 100px;
 }
 
 .site-footer, .page-wrap:after {
@@ -84,7 +79,6 @@ height: 70px;
 
 .site-footer {
   background: #663300;
-  z-index: 2;
 }
 
 .site-footer {
