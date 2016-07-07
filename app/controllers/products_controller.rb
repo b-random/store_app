@@ -1,21 +1,19 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   
-  respond_to :json, :html
 
   def index
-  if params[:q]
-    search_term = params[:q]
-    @products = Product.where("name LIKE ?", "%#{search_term}%")
-  else
-    @products = Product.all
+    if params[:q]
+      search_term = params[:q]
+      @products = Product.where("name LIKE ?", "%#{search_term}%" )
+    else
+      @products = Product.all
+    end
+  
   end
-  respond_with @products
-end
 
   def show
-    @comments = @product.comments.order("created_at DESC")
-    @comments = @product.comments.paginate(page: params[:page], per_page: 5)
+    
   end
 
   def new

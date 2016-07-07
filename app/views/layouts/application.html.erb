@@ -29,13 +29,12 @@
 		  <li><a href="../static_pages/contact">Contact</a></li>
 		  <li><a href="../static_pages/about">About</a></li>
 		</ul>
-		<%= form_tag("/products", method:"GET", class: "navbar-form navbar-right") do %>
-		  <div class="form-group">
-		    <%= label_tag(:q, "Search for:", class: "hidden") %>
-		    <%= text_field_tag(:q, "", placeholder: "Search", class: "form-control") %>
-		    <%= submit_tag("Submit") %>
-		  </div>
-		<% end %>
+		<div class="default-search">
+ 			<%= form_tag("/products", method: "get") do %>
+  		<%= text_field_tag(:q) %>
+   		<%= submit_tag("Find it") %>
+ 			<% end %>
+ 		</div>
   </header>
 
 	<div class="page-wrap">
