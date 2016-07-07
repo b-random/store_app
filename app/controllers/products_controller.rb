@@ -4,14 +4,19 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
-    render layout: "products" 
-    #creates a default layout for products/index.html.erb
+    if params[:q]
+      search_term = params[:q]
+      @products = Product.where("name LIKE ?", "%#{search_term}%" )
+    else
+      @products = Product.all
+    end
+  #creates a default layout for products/index.html.erb
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+    
   end
 
   # GET /products/new
