@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
     else
       @products = Product.all
     end
-  #creates a default layout for products/index.html.erb
+    respond_with @products
   end
 
   # GET /products/1
