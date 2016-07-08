@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
   
   
   def index
-    if Rails.env.test?
+    if Rails.env.production?
       if params[:q]
         search_term = params[:q]
         @products = Product.where('name ILIKE ?', "%#{search_term}%" )
