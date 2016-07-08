@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
     if Rails.env.test?
       if params[:q]
         search_term = params[:q]
-        @products = Product.where('name ilike ?', "%#{search_term}%" )
+        @products = Product.where('name ILIKE ?', "%#{search_term}%" )
       else
         @products = Product.all
       end
