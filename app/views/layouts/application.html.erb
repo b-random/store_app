@@ -25,9 +25,18 @@
 
 	<header class="site-header">
 		<ul class="head-nav">
-		  <li><a href="../#">Home</a></li>
+		  <li><a class="first-nav" href="../#">Home</a></li>
 		  <li><a href="../static_pages/contact">Contact</a></li>
 		  <li><a href="../static_pages/about">About</a></li>
+		</ul>
+		<ul class="nav pull-right">
+			<li>
+		  <% if user_signed_in? %>
+				<%= link_to('Logout', destroy_user_session_path, :method => :delete, class: 'log-in-out') %>
+			<% else %>
+        <%= link_to('Login', new_user_session_path, class: 'log-in-out') %>
+      <% end %>  
+			</li>
 		</ul>
 		<div class="default-search">
  			<%= form_tag("/products", method: "get") do %>
@@ -35,10 +44,14 @@
    		<%= submit_tag("Find it") %>
  			<% end %>
  		</div>
+
   </header>
+
 
 	<div class="page-wrap">
 	  <div class="content">
+	    <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
 	    <%= yield %>
 	  </div>
 	</div>

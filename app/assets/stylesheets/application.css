@@ -47,13 +47,22 @@ body {
   display: block;
   padding: 8px;
   text-decoration: none;
-  color: #fff2e6;
-  color: white;
+  color: #fff;
+  
 }
 
 .head-nav a:hover {
   background-color: #ffb366;
-  color: #ff8000;
+  color: #b35900;
+}
+
+.log-in-out {
+  color: #fff;
+}
+
+.pull-right .log-in-out:hover {
+  background-color: #ffb366;
+  color: #b35900;
 }
 
 .default-search {
