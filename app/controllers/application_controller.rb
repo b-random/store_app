@@ -6,4 +6,9 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
   	products_path
   end
+
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to main_app.root_url, :alert => exception.message
+  end
+  # this redirects a user to root, when trying to edit a different user info.  Gives flash error.
 end
