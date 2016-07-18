@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]   #set user.......... to these actions
-  before_filter :authenticate_user!, :except => [:show, :index]
+
+  before_filter :authenticate_user!, :except => [:show, :index] #makes sure user is signed in
+
   load_and_authorize_resource
+  #finds user and sets @user variable, checks abilities for authorization
+
   # GET /users
   # GET /users.json
   def index
