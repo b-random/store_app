@@ -2,15 +2,15 @@
 
 <p><h1>BeardCo. Products</h1><h6><%= link_to 'New Product', new_product_path %></h6></p>
 
-<div class="container-scroll">
-  <div class="container">
-    <div class="row">
-      <% @products.each do |product| %>
-        <%= render partial: 'product', locals: {product: product} %>
+<div class="pro-container">
+  
+  <div class="pro-row">
+    <% @products.each do |product| %>
+      <%= render partial: 'product', locals: {product: product} %>
         <!--calls the display block in _products.html.erb- because |product| is a local variable, _product is set to |product| with {product: product}-->
-      <% end %>
-    </div>
+    <% end %>
   </div>
+  
 </div>  
 
 
