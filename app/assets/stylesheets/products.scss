@@ -1,64 +1,27 @@
-body {
-	overflow-x: hidden;
-	margin-right: -30px;
+.show-container {
+	display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  margin-top: 25px;
 }
 
-/*_form.html.erb*/
-
-.actions {
-	color: #ff8000;
+.thumbnail {
+	border: 2px solid #000;
+	padding: 0;
 }
 
-.proshow-wrap {
-  margin-top: 75px;
-  width: 750px;
+.caption {
+	background-color: #b3ecff;
+	border-top: 2px solid #000;
 }
 
-.show-header {
-	margin-bottom: -5px;
-	color: orange;
+.caption h3 {
+	font-family: 'Oswald', sans-serif;
 }
 
-.show-pic {
-	margin-top: 13px;
-}
-
-.show-border {
-	border-top: 1px solid #663300;
-	width: 330px;
-	margin-bottom: 5px;
- }
-
-.show-script {
-	width: 400px;
-}
-
-
-
-@media screen and (min-width: 360px) {
-	.proshow-wrap {
-		width: 380px;
-	}
-	.show-pic {
-		width: 50%;
-	}
-	.show-description {
-		margin-right: 30px;
-		margin-left: -5px;
-	}
-}
-
-@media screen and (max-width: 320px) {
-	.proshow-wrap {
-		width: 320px;
-	}
-	.show-pic {
-		width: 50%;
-	}
-	.show-border {
-		width: 280px;
-	}
-	.show-script {
-		width: 320px;
-	}
+.caption p {
+	font-family: 'Oswald', sans-serif;
 }

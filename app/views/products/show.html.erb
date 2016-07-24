@@ -1,34 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 
-
-<div class="container proshow-wrap">
-  <div class="show-header">
-		<p class="show-name">
-			<h2><%= @product.name %></h2>
-		</p>
-  </div>
-  <div class="show-border"></div>
-  <div class="row">
-	  <div class="col-xs-8 show-pic">
-	  	<p>
-			  <%= image_tag(@product.image_url) %>
-			</p>
-			<p>
-				<span class="label label-primary"><%= @product.price %></span>
-			</p>
+<div class="container show-container"
+	<div class="row show-row">
+	  <div class="col-xs-10 show-wrap">
+	    <div class="thumbnail">
+	      <%= image_tag(@product.image_url) %>
+	      <div class="caption">
+	        <h3><%= @product.name %></h3>
+	        <p><%= @product.description %></p>
+	       
+	        <span class="label label-primary"><%= @product.price %></span>
+	      </div>
+	    </div>
 	  </div>
-
-	  <div class="col-xs-8 show-script">
-      <div class="show-border"></div>
-			<p class="show-description">
-			  <strong>Description:</strong>
-			  <%= @product.description %>
-			</p>
-			<p class="show-rate">
-				
-			</p>
-
-	  </div>
-  </div>
-</div>
+	</div>
