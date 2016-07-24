@@ -2,15 +2,27 @@
 
 <p><h1>BeardCo. Products</h1><h6><%= link_to 'New Product', new_product_path %></h6></p>
 
-<div class="pro-container">
-  
-  <div class="pro-row">
-    <% @products.each do |product| %>
-      <%= render partial: 'product', locals: {product: product} %>
+
+      <% @products.each do |product| %>
+        <div class="container col-sm-4 col-md-3 index-container">
+          <div class="row index-row">
+            <div class="index-wrap">
+              <div class="thumbnail">
+                <%= image_tag(product.image_url) %>
+                <div class="index-caption">
+                  <h3><%= product.name %></h3>
+                  <p><%= product.description %></p>
+      
+                  <span class="label label-primary index-label"><%= product.price %></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <!--calls the display block in _products.html.erb- because |product| is a local variable, _product is set to |product| with {product: product}-->
-    <% end %>
+      <% end %>
+    </div>
   </div>
-  
 </div>  
 
 
