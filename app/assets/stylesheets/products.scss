@@ -26,6 +26,15 @@
 	font-family: 'Oswald', sans-serif;
 }
 
+.index-title h1 {
+	font-family: 'Oswald', sans-serif;
+	margin-left: 19px;
+}
+
+.index-button {
+	margin-left: 19px;
+}
+
 .index-row {
 	margin: 5px;
 }
@@ -35,6 +44,11 @@
 	border-top: 2px solid #000;
 	height: 180px;
 	padding-left: 5px;
+}
+
+.index-extra {
+	float: right;
+	margin-right: 5px;
 }
 
 
