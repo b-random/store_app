@@ -1,11 +1,7 @@
+
+
 .show-container {
-	display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  align-items: center;
-  margin-top: 25px;
+	margin-top: 25px;
 }
 
 .thumbnail {
@@ -24,6 +20,15 @@
 
 .caption p {
 	font-family: 'Oswald', sans-serif;
+}
+
+.comments-con {
+	width: 70%;
+	margin-top: 50px;
+}
+
+.comments-row {
+  margin-left: 20px;
 }
 
 .index-title h1 {

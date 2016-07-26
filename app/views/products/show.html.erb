@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 
-<div class="container show-container"
+<div class="container show-container">
 	<div class="row show-row">
-	  <div class="col-xs-10 show-wrap">
+	  <div class="col-sm-8 show-wrap">
 	    <div class="thumbnail">
 	      <%= image_tag(@product.image_url) %>
 	      <div class="caption">
@@ -14,4 +14,18 @@
 	      </div>
 	    </div>
 	  </div>
+	  <div class="comment-wrap col-sm-4">
+        <%= render 'new_comment' %>
+    </div>
 	</div>
+</div>
+
+
+
+<div class="container comments-con">
+  <div class="row comments-row">
+    <div class="comments-all">
+	    <%= render 'comments' %>
+	  </div>
+	</div>    
+</div>
