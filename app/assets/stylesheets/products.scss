@@ -22,9 +22,15 @@
 	font-family: 'Oswald', sans-serif;
 }
 
+.pro-script {
+	font-size: 18px;
+}
+
 .comments-con {
 	width: 70%;
-	margin-top: 50px;
+	margin-top: 100px;
+	background-color: #ffcc99;
+	padding: 0;
 }
 
 .comments-row {
@@ -38,6 +44,10 @@
 
 .index-button {
 	margin-left: 19px;
+}
+
+.comments-all {
+	margin-left: -18px;
 }
 
 .index-row {
@@ -56,6 +66,18 @@
 	margin-right: 5px;
 }
 
+.comms-row {
+	margin: 0;
+}
 
+.comms-name {
+	border-top: 1px solid #fff;
+  margin-right: 17px;
+  overflow-x: hidden;
+}
+
+.rated, .rated-p {
+	margin-left: 5px;
+}
 
 
