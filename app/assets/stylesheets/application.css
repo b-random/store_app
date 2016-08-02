@@ -86,7 +86,7 @@ body {
 
 .site-footer, .page-wrap:after {
   /* .push must be the same height as footer */
-height: 70px; 
+  height: 70px; 
 }
 
 .site-footer {

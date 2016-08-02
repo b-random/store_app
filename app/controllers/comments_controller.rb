@@ -17,6 +17,10 @@ class CommentsController < ApplicationController
   end
 
 	def destroy
+		@comment = Comment.find(params[:id])
+		product = @comment.product
+		@comment.destroy
+		redirect_to product
 	end
 
 	#not need to index or show because comments will be on the products pages.
