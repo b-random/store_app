@@ -10,8 +10,10 @@
 	    <div class="rated" data-score="<%= comment.rating %>"></div>
 	    <div class="rated-plus">
 	      <p class="rated-p"><%= comment.body %></p>
-	      <p><small><%= link_to 'Destroy', product_comment_path(comment.product, comment), class: "comm-destroy", method: :delete, data: { confirm: 'Take a moment and think this through...  Is this what you really want?  Once you do it, there is no turning back.'} %></small>
-	      
+	      <p>
+	        <% if signed_in? && current_user.admin? %>
+	          <small><%= link_to ('<span class="glyphicon glyphicon-trash"></span>').html_safe, product_comment_path(comment.product, comment), class: "comm-destroy", method: :delete, data: { confirm: 'Take a moment and think this through...  Is this what you really want?  Once you do it, there is no turning back.'} %></small>
+	        <% end %>
 	      </p>
 	    </div>  
     </div>   
