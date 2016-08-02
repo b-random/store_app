@@ -85,11 +85,14 @@
 .comms-name {
 	border-top: 1px solid #fff;
   margin-right: 17px;
-  overflow-x: hidden;
+  
 }
 
 .rated, .rated-p {
 	margin-left: 5px;
 }
 
+.rated .comm-destroy {
+	color: red;
+}
 
