@@ -13,12 +13,17 @@ describe Product do
 			@product.comments.create!(rating: 3, body: "awesome!", user: @user)
 			@product.comments.create!(rating: 5, body: "awesome!", user: @user)
 			#can also use dot notation/ 
+			Product.new(description: "Nice bike")
 		end
 
 		it "returns the average rating of all comments" do
 			expect(@product.average_rating).to eq 3
 			#average_rating defined in model/product.rb
 		end
+	end
+
+	it "is not valid" do
+		expect(Product.new(description: "Nice bike")).not_to be_valid
 	end
 
 end
