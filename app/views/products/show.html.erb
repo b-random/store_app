@@ -7,11 +7,13 @@
 	    <div class="thumbnail">
 	      <%= image_tag(@product.image_url) %>
 	      <div class="caption">
-	        <h3><%= @product.name %></h3>
+	        <span><h3><%= @product.name %></h3></span>
+	        <span class="label label-primary"><%= @product.price %></span>
 	        <h6>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></h6>
 	        <p class="pro-script"><%= @product.description %></p>
 	       
-	        <span class="label label-primary"><%= @product.price %></span>
+	        
+	        <span><%= render 'shared/stripe_checkout_button' %></span>
 	        
 	      </div>
 	    </div>
