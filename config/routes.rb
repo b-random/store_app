@@ -3,6 +3,7 @@ Rails.application.routes.draw do
    :path_names => {:sign_in => 'login', :sign_out => 'logout'}
   
   resources :users
+  post 'payments/create'
   #this is a shorthand way of adding default CRUD routes to a controller
 
   resources :products do

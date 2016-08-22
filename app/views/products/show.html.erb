@@ -13,7 +13,9 @@
 	        <p class="pro-script"><%= @product.description %></p>
 	       
 	        
-	        <span><%= render 'shared/stripe_checkout_button' %></span>
+	        <%= form_tag "/payments/create" do %>
+              <%= render partial: "shared/stripe_checkout_button" %>
+            <% end %>
 	        
 	      </div>
 	    </div>
