@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
   
   
   def index
+    
     if Rails.env.production?
       if params[:q]
         search_term = params[:q]
@@ -18,6 +19,7 @@ class ProductsController < ApplicationController
         @products = Product.all
       end
     end 
+
   end
 
   def show
