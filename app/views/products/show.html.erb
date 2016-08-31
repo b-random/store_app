@@ -6,7 +6,7 @@
 	<div class="row show-row">
 	  <div class="col-sm-8 show-wrap">
 	    <div class="thumbnail">
-	      <%= image_tag(@product.image_url) %>
+	      <%= image_tag(@product.image_url, class: "img-responsive image img-zoom", data_zoom_image: @product.image_url) %>
 	      <div class="caption">
 	        <span><h3><%= @product.name %></h3></span>
 	        <span class="label label-primary"><%= @product.price %></span>

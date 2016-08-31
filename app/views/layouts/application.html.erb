@@ -6,11 +6,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <!--bootstrap core css (bs must be added first so the bs styles are applied over scss style)-->
 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <!--links to static_pages.scss, which is linked to application.scss-->
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => "reload" %>  <!--links to static_pages.scss, which is linked to application.scss-->
 
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <!--links to app/assets/javascript/? jquery included in Rails-->
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
+  <!--applies any .js file under /assets/javascripts to any view-->
+   <!--links to app/assets/javascript/? jquery included in Rails-->
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <!--link to bootstrap js (bs js depends on jquery which is linked with the js link above.)-->

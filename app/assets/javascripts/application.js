@@ -19,3 +19,16 @@
 $(document).ready(function() {
   $(".alert").delay(4000).fadeOut(2000);
 });
+
+
+$('.img-zoom').elevateZoom({
+ +    zoomType: "lens",
+ +    lensShape: "round",
+ +    lensSize: 300,
+ +      scrollZoom: true,
+ +			lensFadeIn: 500,
+ +			lensFadeOut: 500
+ +  });
+
+
+
