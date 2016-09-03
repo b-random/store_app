@@ -6,11 +6,11 @@
 	<div class="row show-row">
 	  <div class="col-sm-8 show-wrap">
 	    <div class="thumbnail">
-	      <%= image_tag(@product.image_url, class: "img-responsive image img-zoom", data_zoom_image: @product.image_url) %>
+	      <%= image_tag(@product.image_url, width: "200", class: "img-responsive image img-zoom", data_zoom_image: @product.image_url) %>
 	      <div class="caption">
 	        <span><h3><%= @product.name %></h3></span>
 	        <span class="label label-primary"><%= @product.price %></span>
-	        <h6>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></h6>
+	        <h6>Average Rating: <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div></h6>
 	        <p class="pro-script"><%= @product.description %></p>
 	       
 	        
@@ -31,7 +31,7 @@
 
 <div class="container comments-con">
   <div class="row comments-row">
-    <div class="comments-all">
+    <div class="comments-all" id="product-reviews">
 	    <%= render 'comments' %>
 	</div>
 	<div class="comments-pagination"><%= will_paginate @comments %>

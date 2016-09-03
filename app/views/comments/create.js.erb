@@ -1,0 +1,6 @@
+$("#new_comment").html("Thanks for the review!")
+$('#product-reviews').prepend("<%= j render @comment %>");
+/*Adds new comment to top of current pages comments.  After refresh, comment put at the end.*/
+
+$("#average-rating").attr('data-score', "<%= @product.average_rating %>");
+
