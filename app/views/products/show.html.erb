@@ -6,22 +6,19 @@
 	<div class="row show-row">
 	  <div class="col-sm-8 show-wrap">
 	    <div class="thumbnail">
-	      <% cache @product do %>
-	        <% sleep 5 %>
-			      <%= image_tag(@product.image_url, width: "200", class: "img-responsive image img-zoom", data_zoom_image: @product.image_url) %>
-			      <div class="caption">
-			        <span><h3><%= @product.name %></h3></span>
-			        <span class="label label-primary"><%= @product.price %></span>
-			        <h6>Average Rating: <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div></h6>
-			        <p class="pro-script"><%= @product.description %></p>
-			       
-			        
-			        <%= form_tag "/payments/create" do %>
-		              <%= render partial: "shared/stripe_checkout_button" %>
-		            <% end %>
-			        
-			      </div>
-			  <% end %>    
+	      <%= image_tag(@product.image_url, width: "200", class: "img-responsive image img-zoom", data_zoom_image: @product.image_url) %>
+	      <div class="caption">
+	        <span><h3><%= @product.name %></h3></span>
+	        <span class="label label-primary"><%= @product.price %></span>
+	        <h6>Average Rating: <div id="average-rating" class="rated" data-score="<%= @product.average_rating %>"></div></h6>
+	        <p class="pro-script"><%= @product.description %></p>
+	       
+	        
+	        <%= form_tag "/payments/create" do %>
+              <%= render partial: "shared/stripe_checkout_button" %>
+            <% end %>
+	        
+	      </div>
 	    </div>
 	  </div>
 	  <div class="comment-wrap col-sm-4">
