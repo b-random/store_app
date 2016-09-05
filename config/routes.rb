@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_for :users, :path => '',
    :path_names => {:sign_in => 'login', :sign_out => 'logout'}
   
@@ -22,6 +23,8 @@ Rails.application.routes.draw do
 
   post 'static_pages/thank_you'
   #post the thank_you action in the static_pages_controller
+
+  mount ActionCable.server => '/cable'
 
   
   # The priority is based upon order of creation: first created -> highest priority.
@@ -78,4 +81,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
 end
