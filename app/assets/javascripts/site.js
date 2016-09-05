@@ -1,6 +1,6 @@
 /*any new JS files you put into this folder should be included by your application automatically- this file will contain site wide functions*/
 
-$(document).on('ready page:load', function() {
+$(document).on('turbolinks:load', function() {
 	$('.img-zoom').elevateZoom({scrollZoom: true});
 	$('.rating').raty( { path: '/assets/images', scoreName: 'comment[rating]' });
 
