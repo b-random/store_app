@@ -67,3 +67,5 @@ gem 'cancancan'
 gem 'will_paginate', '~> 3.0.5'
 
 gem "brakeman", :require => false
+
+gem 'redis-rails'
