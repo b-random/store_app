@@ -11,3 +11,5 @@
   App.cable = ActionCable.createConsumer();
 
 }).call(this);
+
+/*This part will create a consumer, thus initializing the ActionCable WebSocket connection whenever somebody accesses your app.
