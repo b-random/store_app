@@ -32,8 +32,9 @@
 <div class="container comments-con">
   <div class="row comments-row">
     <div class="comments-all" id="product-reviews">
+      <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
 	    <%= render 'comments' %>
-	</div>
+	  </div>
 	<div class="comments-pagination"><%= will_paginate @comments %>
 	
     </div>  
