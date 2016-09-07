@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
 	def create
 		@product = Product.find(params[:product_id])
 		@comment = @product.comments.new(comment_params)
-		#   (comment_params) == (params[:comment])
+		#        = this products new comment with attr set in private action comment_params
 		@comment.user = current_user
 		respond_to do |format|
       if @comment.save
