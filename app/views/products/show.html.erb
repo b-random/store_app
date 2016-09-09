@@ -3,7 +3,7 @@
 <p id="notice"><%= flash[:error] %></p>
 
 <div class="container show-container">
-	<div class="row show-row">
+	<div class="row show-row" data-product-id="<%= @product.id %>">
 	  <div class="col-sm-8 show-wrap">
 	    <div class="thumbnail">
 	      <%= image_tag(@product.image_url, width: "200", class: "img-responsive image img-zoom", data_zoom_image: @product.image_url) %>
