@@ -1,0 +1,298 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+@import 'https://fonts.googleapis.com/css?family=Arvo';
+$main-font:Open sans;
+$display-font:'Arvo', serif;
+body {
+  
+  box-sizing: border-box;
+}
+.container {
+  
+}
+.banner {
+  background-image:url('https://hd.unsplash.com/photo-1461301214746-1e109215d6d3');
+  background-repeat:no-repeat;
+  background-position:center;
+  background-attachment: fixed;
+  height:900px;
+  
+  
+}
+
+.Hero {
+  
+}
+
+.logo {
+  position:absolute;
+  margin:0px;
+  
+  h1 {
+    padding:20px;
+    transition:all 0.3s ease-in-out;
+    cursor:pointer;
+  }
+  
+  h1:hover{
+    background-color:#ccc;
+    
+  }
+  a {
+    color:white;
+    text-decoration:none;
+    font-size:1.2rem;
+    font-family: 'Open sans';
+    
+  }
+}
+
+.search {
+  float:right;
+  
+  img{
+    width:20px;
+    padding:20px;
+    transition:all 0.3s ease-in-out;
+    cursor:pointer;
+  }
+  
+  img:hover {
+    background-color:#CE012A;
+  }
+}
+
+.main {
+  position:absolute;
+  left:50%;  
+  top:50%;
+  transform:translate(-50%,-50%);
+  h1 {
+    color:white;
+    background-color:rgba(0,0,0,0.7);
+    font-size:2.5rem;
+    font-family: 'Arvo', serif;
+    padding:20px;
+    letter-spacing:20px;
+    
+  }
+  
+ 
+}
+
+
+
+section{
+  position:relative;
+  text-align:center;
+  margin-top:120px;
+  color:#999;
+  font-family:$main-font;
+  h2 {
+    font-size:1.5rem;
+    margin-bottom:30px;
+  }
+  span {
+    font-style: italic;
+    
+  }
+  
+   p {
+    text-align:justify;
+    max-width:100%;
+    word-spacing:2px;
+    line-height:30px;
+    margin:20px 40px;;
+     font-size:1.2rem;
+  }
+}
+
+.second {
+  display:flex;
+}
+
+.about {
+  margin-top:80px;
+  float:left;
+  h2 {
+    margin-bottom:60px;
+  }
+  .pic{
+    overflow:hidden;
+    width:350px;  
+    height:350px;
+    border-radius:50%; /*pic should be round*/
+    margin:0px 180px;
+    img {
+      width:650px;
+    }
+  }
+  
+  
+}
+
+.about_text{
+  margin-top:60px;
+  float:right;
+}
+
+
+.port {
+  overflow:hidden; 
+  height:500px; 
+  margin-bottom:80px;
+ 
+}
+.banner2 {
+  background-image:url('http://16102-presscdn-0-48.pagely.netdna-cdn.com/wp-content/uploads/2014/06/unsplash-example.jpg
+');
+  background-repeat:no-repeat;
+  background-position:center;
+  background-attachment: fixed; 
+  height:700px;
+  position:relative;  
+    
+    h1 {
+      font-size:3rem;
+      color:white;
+      position:absolute;
+      top:40%;
+      left:50%;
+       transform:translate(-50%,-50%);
+      letter-spacing:20px;
+      }  
+}
+
+
+.work {
+  span {
+    fony-style:italic;
+    line-height:30px;
+    font-size:1.2rem;
+  }
+}
+
+
+
+.grid {
+  display:flex;
+  flex-wrap:wrap;
+  margin:60px;
+  justify-content:center;
+  .box {
+    width:250px;
+    height:200px;
+    overflow:hidden;
+    margin:10px; 
+    cursor:pointer;
+  }
+  img {
+    transition:all 0.3s ease-in-out; 
+  }
+  img:hover {
+    transform:scale(1.3);
+  }
+}
+
+
+
+
+.con {
+  overflow:hidden; 
+  height:500px; 
+  margin-bottom:80px;
+ 
+}
+.banner3 {
+  background-image:url('https://hd.unsplash.com/photo-1463681457836-cc9f3f99608b
+');
+  background-repeat:no-repeat;
+  background-position:center;
+  background-attachment: fixed; 
+  height:700px;
+  position:relative;  
+    
+    h1 {
+      font-size:3rem;
+      font-family:$main-font;
+      color:white;
+      position:absolute;
+      top:40%;
+      left:50%;
+       transform:translate(-50%,-50%);
+      letter-spacing:20px;
+      }  
+}
+
+.contact {
+  display:flex;
+  
+}
+
+.map {
+  width:400px;
+  height:500px;
+  overflow:hidden;
+  margin-left:60px;
+}
+
+
+.con-text {
+  margin-left:60px;
+  
+}
+.text {
+  display:flex;
+  margin-bottom:20px;
+  
+  
+  span img {
+    width:30px;
+    
+  }
+  
+  h3 {
+    font-size:1.4rem;
+    font-weight:600;
+    font-style:none;
+    margin-left:20px;
+  }
+}
+
+.con-form {
+  margin-left:-40px;
+  margin-top:20px;
+  p {
+    margin-top:80px;
+    margin-left:10px;
+  }
+  form {
+    margin-top:20px;
+    .name {
+      width: 340px;
+      padding: 18px 10px;
+      font-size:18px;
+      font-weight:300;
+      border: 2px solid #ccc;
+    }
+    
+    .email {
+      margin-left:10px;
+      width: 340px;
+      padding: 18px 10px;
+      font-size:18px;
+      font-weight:300;
+      border: 2px solid #ccc;
+
+    }
+    
+    .comment {
+      margin:10px;
+      width: 715px;
+      padding: 18px 10px;
+      font-size:18px;
+      font-weight:300;
+      border: 2px solid #ccc;
+
+    }
+  }  
+}
